@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var toucheLabel: UILabel!
     @IBOutlet var buttonCollection: [UIButton]!
     
-    private let emojiCollection = ["🦊", "🐹", "🐻", "🐸"];
+    private lazy var game = ConcentrationGame(numberOfPairsOfCards: (buttonCollection.count + 1) / 2)
+    private var emojiCollection = ["🦊", "🐹", "🐻", "🐸"];
+    private var emojiDictionary = [Int: String]()
     private var touches = 0 {
         didSet {
             toucheLabel.text = "Touches: \(touches)"
@@ -29,20 +31,40 @@ class ViewController: UIViewController {
         
     }
     
-    func flipButton(emoji: String, button: UIButton) -> Void {
-        if button.currentTitle == emoji {
-            button.setTitle("", for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
-        } else {
-            button.setTitle(emoji, for: .normal)
-            button.backgroundColor = .white
+    func emojiIndetifier(for card: Card) -> String {
+        if emojiDictionary[card.indetifier] == nil {
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiCollection.count)))
+            emojiDictionary[card.indetifier] = emojiCollection.remove(at: randomIndex)
+            
+        }
+        return emojiDictionary[card.indetifier] ?? "?"
+        
+    }
+    
+    private func updateViewFromModel() -> Void {
+        
+        for index in buttonCollection.indices {
+            
+            let button = buttonCollection[index]
+            let card = game.cards[index]
+            
+            if card.isFaceUp {
+                button.setTitle(emojiIndetifier(for: card), for: .normal)
+                button.backgroundColor = .white
+            } else {
+                button.setTitle("", for: .normal)
+                button.backgroundColor = card.isMatched ?  #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 0): #colorLiteral(red: 0.3236978054, green: 0.1063579395, blue: 0.574860394, alpha: 1)
+            }
         }
     }
+    
+    
     
     @IBAction func buttonAction(_ sender: UIButton) {
         touches += 1
         if let buttonIndex = buttonCollection.firstIndex(of: sender) {
-            flipButton(emoji: emojiCollection[buttonIndex], button: sender)
+            game.choseCard(at: buttonIndex)
+            updateViewFromModel()
         }
     }
 }
