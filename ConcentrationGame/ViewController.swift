@@ -8,8 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    private var unitPercent: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
