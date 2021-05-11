@@ -15,6 +15,7 @@
 		D16DFB5E2649CC6B00A9EB0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16DFB5C2649CC6B00A9EB0F /* LaunchScreen.storyboard */; };
 		D16DFB682649D8D200A9EB0F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DFB672649D8D200A9EB0F /* Card.swift */; };
 		D16DFB6A2649D8F600A9EB0F /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DFB692649D8F600A9EB0F /* ConcentrationGame.swift */; };
+		D16DFB6E264AFCAF00A9EB0F /* ViewControllerTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DFB6D264AFCAF00A9EB0F /* ViewControllerTesting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D16DFB5F2649CC6B00A9EB0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D16DFB672649D8D200A9EB0F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D16DFB692649D8F600A9EB0F /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
+		D16DFB6D264AFCAF00A9EB0F /* ViewControllerTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTesting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,11 @@
 		D16DFB502649CC6500A9EB0F /* ConcentrationGame */ = {
 			isa = PBXGroup;
 			children = (
+				D16DFB6C264AFC2D00A9EB0F /* ViewController */,
+				D16DFB6B264AFC2700A9EB0F /* View */,
 				D16DFB662649D8C100A9EB0F /* Model */,
 				D16DFB512649CC6500A9EB0F /* AppDelegate.swift */,
 				D16DFB532649CC6500A9EB0F /* SceneDelegate.swift */,
-				D16DFB552649CC6500A9EB0F /* ViewController.swift */,
-				D16DFB572649CC6500A9EB0F /* Main.storyboard */,
 				D16DFB5A2649CC6B00A9EB0F /* Assets.xcassets */,
 				D16DFB5C2649CC6B00A9EB0F /* LaunchScreen.storyboard */,
 				D16DFB5F2649CC6B00A9EB0F /* Info.plist */,
@@ -79,6 +81,23 @@
 				D16DFB672649D8D200A9EB0F /* Card.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D16DFB6B264AFC2700A9EB0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D16DFB572649CC6500A9EB0F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D16DFB6C264AFC2D00A9EB0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D16DFB552649CC6500A9EB0F /* ViewController.swift */,
+				D16DFB6D264AFCAF00A9EB0F /* ViewControllerTesting.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D16DFB562649CC6500A9EB0F /* ViewController.swift in Sources */,
+				D16DFB6E264AFCAF00A9EB0F /* ViewControllerTesting.swift in Sources */,
 				D16DFB522649CC6500A9EB0F /* AppDelegate.swift in Sources */,
 				D16DFB6A2649D8F600A9EB0F /* ConcentrationGame.swift in Sources */,
 				D16DFB542649CC6500A9EB0F /* SceneDelegate.swift in Sources */,

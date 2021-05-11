@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     private lazy var game = ConcentrationGame(numberOfPairsOfCards: (buttonCollection.count + 1) / 2)
     private var emojiCollection = ["🦊", "🐹", "🐻", "🐸"];
     private var emojiDictionary = [Int: String]()
+    
     private var touches = 0 {
         didSet {
             toucheLabel.text = "Touches: \(touches)"
@@ -57,8 +58,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
     
     @IBAction func buttonAction(_ sender: UIButton) {
         touches += 1
