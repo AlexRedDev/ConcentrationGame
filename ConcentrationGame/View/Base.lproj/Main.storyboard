@@ -106,19 +106,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84Z-v4-Lo5">
-                                <rect key="frame" x="20" y="44" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84Z-v4-Lo5">
+                                <rect key="frame" x="5" y="49" width="404" height="230"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-Ok-gIn">
+                                        <rect key="frame" x="152" y="10" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="f9J-O6-Dm5"/>
+                                            <constraint firstAttribute="width" constant="100" id="wze-QI-cOs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhK-OQ-28b">
+                                        <rect key="frame" x="152" y="120" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="XdZ-vk-W7S"/>
+                                            <constraint firstAttribute="width" constant="100" id="xgZ-i8-8TH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="6Vj-Ok-gIn" firstAttribute="centerX" secondItem="84Z-v4-Lo5" secondAttribute="centerX" id="E7t-X6-vQ5"/>
+                                    <constraint firstItem="6Vj-Ok-gIn" firstAttribute="top" secondItem="84Z-v4-Lo5" secondAttribute="top" constant="10" id="EkH-sV-Or5"/>
+                                    <constraint firstItem="nhK-OQ-28b" firstAttribute="centerX" secondItem="84Z-v4-Lo5" secondAttribute="centerX" id="YfV-Sl-glf"/>
+                                    <constraint firstItem="nhK-OQ-28b" firstAttribute="top" secondItem="6Vj-Ok-gIn" secondAttribute="bottom" constant="10" id="dvK-q7-5hW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="jiJ-i0-DlJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhK-OQ-28b" secondAttribute="bottom" constant="10" id="uaG-Fp-uZ1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="xOr-17-dwR"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N8Z-pB-fVe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="84Z-v4-Lo5" firstAttribute="leading" secondItem="N8Z-pB-fVe" secondAttribute="leading" constant="5" id="Dmo-hJ-xOi"/>
+                            <constraint firstItem="N8Z-pB-fVe" firstAttribute="trailing" secondItem="84Z-v4-Lo5" secondAttribute="trailing" constant="5" id="Yeh-Gd-XYk"/>
+                            <constraint firstItem="84Z-v4-Lo5" firstAttribute="top" secondItem="N8Z-pB-fVe" secondAttribute="top" constant="5" id="qec-7R-meI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DgK-4X-OMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="117"/>
+            <point key="canvasLocation" x="828.98550724637687" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
